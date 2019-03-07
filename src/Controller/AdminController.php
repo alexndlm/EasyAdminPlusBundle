@@ -653,7 +653,7 @@ class AdminController extends BaseAdminController
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function batchAction()
+    public function batchAction(): RedirectResponse
     {
         $name = $this->request->request->get('name') ?? $this->request->query->get('name');
         $ids = $this->request->request->get('ids') ?? $this->request->query->get('ids');
